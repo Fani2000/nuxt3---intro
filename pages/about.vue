@@ -13,17 +13,24 @@
       veritatis delectus excepturi earum a consequatur corrupti in! Laboriosam
       eaque quia quis!
     </p>
+    <div>{{ data.message }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch("/api/ninja?name=Fani", {
+  method: "post",
+  body: { age: 30 },
+});
+console.log(data.value);
+</script>
 
 <style scoped>
 h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
+  margin-bottom: 20px;
+  font-size: 36px;
 }
 p {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 </style>

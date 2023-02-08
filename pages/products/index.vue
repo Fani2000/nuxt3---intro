@@ -12,6 +12,12 @@
 const API_URL = "https://fakestoreapi.com/products";
 
 const { data: products } = await useFetch(API_URL);
+useHead({
+  title: 'Next Dojo | Mech',
+  meta: [
+    {name:'description', content: 'Nuxt 3 Mech for the products'}
+  ]
+})
 </script>
 
 <style scoped></style>
